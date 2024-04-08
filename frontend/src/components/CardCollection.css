@@ -1,0 +1,9 @@
+.collection {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-block: 2rem;
+  max-width: 1200px;
+  margin-inline: auto;
+}

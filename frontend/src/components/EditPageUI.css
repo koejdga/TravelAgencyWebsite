@@ -1,0 +1,13 @@
+.edit-page-container {
+  display: flex;
+  gap: 10vw;
+  margin-inline: 2rem;
+  margin-top: 1rem;
+}
+
+.edit-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
