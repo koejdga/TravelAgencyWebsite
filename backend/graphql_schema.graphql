@@ -1,0 +1,134 @@
+type Query {
+  countries: [Country]
+  cities: [City]
+  hotels: [Hotel]
+  restaurants: [Restaurant]
+  trips: [Trip]
+}
+
+type Mutation {
+  login(username: String!, password: String!): String
+
+  addCountry(input: CountryInput): ResultSetHeader
+  updateCountry(id: ID!, input: CountryInput): ResultSetHeader
+  deleteCountry(id: ID!): ResultSetHeader
+
+  addCity(input: CityInput): ResultSetHeader
+  updateCity(id: ID!, input: CityInput): ResultSetHeader
+  deleteCity(id: ID!): ResultSetHeader
+
+  addHotel(input: HotelInput): ResultSetHeader
+  updateHotel(id: ID!, input: HotelInput): ResultSetHeader
+  deleteHotel(id: ID!): ResultSetHeader
+
+  addRestaurant(input: RestaurantInput): ResultSetHeader
+  updateRestaurant(id: ID!, input: RestaurantInput): ResultSetHeader
+  deleteRestaurant(id: ID!): ResultSetHeader
+
+  addTrip(input: TripInput): ResultSetHeader
+  updateTrip(id: ID!, input: TripInput): ResultSetHeader
+  deleteTrip(id: ID!): ResultSetHeader
+}
+
+type Subscription {
+  countryAdded: Country
+  countryEdited: Country
+  countryDeleted: Int
+
+  cityAdded: City
+  cityEdited: City
+  cityDeleted: Int
+
+  hotelAdded: Hotel
+  hotelEdited: Hotel
+  hotelDeleted: Int
+
+  restaurantAdded: Restaurant
+  restaurantEdited: Restaurant
+  restaurantDeleted: Int
+
+  tripAdded: Trip
+  tripEdited: Trip
+  tripDeleted: Int
+}
+
+type ResultSetHeader {
+  fieldCount: Int
+  affectedRows: Int
+  insertId: Int
+  info: String
+  serverStatus: Int
+  warningStatus: Int
+  changedRows: Int
+}
+
+type Country {
+  id: Int!
+  country_name: String!
+}
+
+type City {
+  id: Int!
+  city_name: String!
+  country: Int!
+}
+
+type Hotel {
+  id: Int!
+  hotel_name: String!
+  hotel_address: String!
+  city: Int!
+  link: String
+}
+
+type Restaurant {
+  id: Int!
+  restaurant_name: String!
+  restaurant_address: String!
+  city: Int!
+  link: String
+}
+
+type Trip {
+  id: Int!
+  trip_name: String!
+  trip_description: String
+  city: Int!
+  price: Int!
+  sale: Int
+  hotel: Int!
+  restaurant: Int!
+}
+
+input CountryInput {
+  country_name: String!
+}
+
+input CityInput {
+  city_name: String!
+  country: Int!
+}
+
+input HotelInput {
+  hotel_name: String!
+  hotel_address: String!
+  city: Int!
+  link: String
+}
+
+input RestaurantInput {
+  restaurant_name: String!
+  restaurant_address: String!
+  city: Int!
+  link: String
+}
+
+input TripInput {
+  trip_name: String!
+  trip_description: String
+  city: Int!
+  price: Int!
+  sale: Int
+  hotel: Int!
+  restaurant: Int!
+}

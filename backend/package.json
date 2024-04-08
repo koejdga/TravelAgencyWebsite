@@ -1,0 +1,46 @@
+{
+  "scripts": {
+    "start": "ts-node graphql_server.ts",
+    "dev": "ts-node-dev --respawn ./apollo_server.ts"
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "graphql_server.ts",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@apollo/server": "^4.10.2",
+    "@graphql-tools/schema": "^10.0.3",
+    "@types/bcrypt": "^5.0.2",
+    "apollo-server": "^3.13.0",
+    "apollo-server-core": "^3.13.0",
+    "apollo-server-express": "^3.13.0",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "graphql": "^16.8.1",
+    "graphql-http": "^1.22.0",
+    "graphql-import-node": "^0.0.5",
+    "graphql-subscriptions": "^2.0.0",
+    "graphql-tag": "^2.12.6",
+    "graphql-ws": "^5.16.0",
+    "has-property-descriptors": "^1.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.9.3",
+    "ruru": "^2.0.0-beta.11",
+    "subscriptions-transport-ws": "^0.11.0",
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20.12.5",
+    "@types/ws": "^8.5.10",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0"
+  }
+}
