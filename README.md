@@ -21,3 +21,16 @@ The Travel Agency Website provides users with an intuitive interface to browse a
 - **Backend**: Node.js, Express.js
 - **Database**: MySQL
 - **APIs**: REST, GraphQL
+
+## Setup Instructions
+
+1. Clone the repository to your local machine.
+2. Set up the MySQL database using the provided schema (`backend/create_tables.sql`).
+4. Navigate to the `backend` directory and install dependencies using `npm install`.
+5. Create `.env` file based on `.env.example` and fill in with your variables.
+6. Start the REST server, the GraphQL server, or both, depending on your preference.
+7. Start the REST server by running `ts-node rest_server.ts`.
+8. Start the GraphQL server by running `ts-node apollo_server.ts`.
+9. Navigate to the frontend directory and install dependencies using `npm install`.
+10. Adjust the API setting in the config file `frontend/src/config.js` to use either REST or GraphQL.
+11. Start the frontend server by running `npm start`.
