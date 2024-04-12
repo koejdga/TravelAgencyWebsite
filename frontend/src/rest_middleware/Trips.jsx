@@ -46,8 +46,6 @@ const Trips = () => {
     };
 
     fetchData();
-    const intervalId = setInterval(fetchData, 2000);
-    return () => clearInterval(intervalId);
   }, []);
 
   if (loading) return <Loading />;

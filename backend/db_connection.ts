@@ -1,24 +1,13 @@
 import mysql from "mysql2/promise";
+import dotenv from "dotenv";
+dotenv.config();
 
 export async function connectToDatabase() {
   const connection = await mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    database: "travel_cards",
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    database: process.env.DB_NAME,
   });
 
   return connection;
 }
-
-// import mysql, { ConnectionOptions } from "mysql2";
-
-// const access: ConnectionOptions = {
-//   host: "localhost",
-//   user: "root",
-//   database: "travel_cards",
-// };
-
-// export function connectToDatabase() {
-//   const conn = mysql.createConnection(access);
-//   return conn;
-// }
